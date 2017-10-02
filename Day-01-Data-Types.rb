@@ -1,5 +1,5 @@
 # Task
-# Complete the code in the editor below. The variables , , and  are already declared and initialized for you. You must:
+# Complete the code in the editor below. The variables i, d, and s are already declared and initialized for you. You must:
 
 # Declare  variables: one of type int, one of type double, and one of type String.
 # Read  lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your  variables.
@@ -10,9 +10,9 @@
 
 # Explanation
 
-# When we sum the integers  and , we get the integer .
-# When we sum the floating-point numbers  and , we get .
-# When we concatenate HackerRank with is the best place to learn and practice coding!, we get HackerRank is the best place to learn and practice coding!.
+# When we sum the integers 4 and 12, we get the integer 16 .
+# When we sum the floating-point numbers 4.0 and 4.0, we get 8.0 .
+# When we concatenate "HackerRank " with "is the best place to learn and practice coding!", we get "HackerRank is the best place to learn and practice coding!".
 #
 # You will not pass this challenge if you attempt to assign the Sample Case values to your variables instead of following the instructions above and reading input from stdin.
 
