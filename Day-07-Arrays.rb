@@ -23,7 +23,7 @@ end
 
 print my_arr.join(" ")
 
-# Another approach:
+# Another approach invoking Ruby's built-in #each_index method:
 my_arr = []
 
 arr.each_index do |idx|
@@ -32,10 +32,9 @@ end
 
 print my_arr.join(" ")
 
-# Another approach:
+# Another approach using an until loop as well as unshift:
 my_arr = []
-my_arr << arr.first
-i = 1
+i = 0
 
 until my_arr.length == n
     my_arr.unshift(arr[i])
