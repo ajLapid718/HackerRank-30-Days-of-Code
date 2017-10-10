@@ -19,44 +19,19 @@
 # Not found
 # harry=12299933
 
-# Ruby
-
 queries = gets.to_i
-hash_table = {}
+directory = {}
 
-queries.times do |time|
-  name, phone = gets.strip.split(" ")
-  hash_table[name] = phone
+queries.times do |placeholder|
+  name, number = gets.split(" ")
+  directory[name] = number
 end
 
-names_to_check = []
-STDIN.each_line do |name|
-  names_to_check << name.chomp
-end
-
-hash_table.each do |name, phone|
-  if names_to_check.include?(name)
-      puts "#{name}" + "=" + "#{phone}"
+while true
+  name = gets.chomp
+  if directory.has_key?(name)
+    puts "#{name}" + "=" + "#{directory[name]}"
   else
-      puts "Not found"
+    puts "Not found"
   end
 end
-
-# Python 3
-
-queries = int(input().strip())
-hash_table = {}
-
-for element in range(queries):
-    name, phone = input().split()
-    hash_table[name] = phone
-
-while True:
-    try:
-        name = input()
-    except EOFError:
-        break
-    if name in hash_table:
-        print("{}={}".format(name, hash_table[name]))
-    else:
-        print("Not found")
