@@ -22,15 +22,15 @@
 # Ruby
 
 queries = gets.to_i
-arr = []
+hash_table = {}
 
-queries.times do |x|
-  arr << gets.strip.split(" ")
+queries.times do |time|
+  name, phone = gets.strip.split(" ")
+  hash_table[name] = phone
 end
-hash_table = arr.to_h
 
 names_to_check = []
-STDIN.readlines.each do |name|
+STDIN.each_line do |name|
   names_to_check << name.chomp
 end
 
@@ -47,10 +47,9 @@ end
 queries = int(input().strip())
 hash_table = {}
 
-for i in range(queries):
-    line = input()
-    k, v = line.split()
-    hash_table[k] = v
+for element in range(queries):
+    name, phone = input().split()
+    hash_table[name] = phone
 
 while True:
     try:
