@@ -15,14 +15,14 @@ Sample Output
 class Difference
   attr_reader :maximumDifference
 
-	def initialize(elements)
-		@elements = elements
-	end
+  def initialize(elements)
+    @elements = elements
+  end
 
-	def computeDifference
-		sorted_elements = @elements.sort
-		@maximumDifference = sorted_elements[-1] - sorted_elements[0]
-	end
+  def computeDifference
+    sorted_elements = @elements.sort
+    @maximumDifference = sorted_elements[-1] - sorted_elements[0]
+  end
 end
 
 amount_of_elements = gets
