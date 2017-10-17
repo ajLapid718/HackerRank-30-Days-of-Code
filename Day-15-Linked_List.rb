@@ -58,7 +58,7 @@ class Solution
         current_node = current_node.next # Keep changing the current_node value to the node in front that is being pointed toward.
       end
 
-      current_node.next = Node.new(value) # Populate or insert a new node object to replace the nil value; this adds a new node at the end of the linked list.
+      current_node.next = Node.new(value) # Insert or add a new node object to replace the nil value; this adds a new node at the end of the linked list.
       return head # Return the original head in order for the display method to properly show the contents of the linked list.
     end
   end
