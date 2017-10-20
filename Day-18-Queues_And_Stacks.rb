@@ -39,7 +39,7 @@ end
 
 # Provided by HackerRank
 
-# create Solution class object
+# create a Solution class object
 solution = Solution.new
 
 # read the input
