@@ -16,8 +16,8 @@ class Solution
   attr_reader :stack, :queue
 
   def initialize
-      @stack = []
-      @queue = []
+    @stack = []
+    @queue = []
   end
 
   def push_character(element)
