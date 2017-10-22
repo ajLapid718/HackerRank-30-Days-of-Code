@@ -26,17 +26,17 @@ a = a.split(' ').map(&:to_i)
 # My solution
 counter = 0
 loop do
-    sorted = true
+  sorted = true
 
-    a[0...-1].each_index do |i|
-        if a[i] > a[i+1]
-            sorted = false
-            counter += 1
-            a[i], a[i+1] = a[i+1], a[i]
-        end
+  a[0...-1].each_index do |i|
+    if a[i] > a[i+1]
+      sorted = false
+      counter += 1
+      a[i], a[i+1] = a[i+1], a[i]
     end
+  end
 
-    break if sorted == true
+  break if sorted == true
 end
 
 puts "Array is sorted in #{counter} swaps."
