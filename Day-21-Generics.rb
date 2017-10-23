@@ -81,7 +81,7 @@ Looking into things further, I found out a few things. Originally, I had some hi
 Ruby is a programming language with dynamic typing as opposed to a programming language with static typing.
 Dynamic typed languages are those in which type checking is done at run-time whereas static typed languages are those in which type checking is done at compile-time.
 In terms of debugging and a somewhat out-there analogy, dynamic typed languages have more of an affinity toward treatment whereas static typed languages have more of an affinity toward prevention.
-Testing (example: RSpec) becomes even more crucial.
+Testing (example: RSpec) becomes even more crucial as the likelihood and risk of accruing technical debt/silent bugs increases for dynamic typed languages (relative to static typing).
 
 Ruby follows duck-typing. Everything is generic in a sense. Things in Ruby are more behavior-centric.
 It is possible to pass parameters/arguments of any class to any method, which is the original reason why a programmer might need to implement generics.
