@@ -32,17 +32,33 @@ Let's walk through a scenario where the set is {1,2,3,4} and k is set to a value
 That means we'll need to set k - 1 to a value of 2.
 That means that (2|2) will return a value of 2.
 2 is less than or equal to our n of 4.
-Therefore, we the output is k-1 aka 2.
-That's as far as stepping through the function goes.
+Therefore, our output is k-1 aka 2.
+That's as far as stepping through the function goes when we have an odd-valued variable k.
 
-As far as the logical breakdown, this is the reason behind the code's success.
-Our target is going to be the closest number that is less than k, so that would be k-1.
+Let's walk through a scenario where the set is {1,2,3,4} and k is set to a value of 4.
+That means we'll need to set k-1 to a value of 3.
+That means that (3|4) will return a value of 7.
+7 is greater than our n of 4.
+Therefore, our output is k-2 aka 2.
+That's as far as stepping through the function goes when we have an even-valued variable k.
+
+Let's walk through a scenario where the set is {1,2} and k is set to a value of 2.
+That means we'll need to set k-1 to a value of 1.
+That means that (1|2) will return a value of 3.
+3 is greater than our n of 2.
+Therefore, our output is k-2 aka 0.
+That's as far as stepping through the function goes when we have an even-valued variable k.
+
+As far as the logical breakdown, there's more to the reason behind the code's success.
+Our target is going to be the closest number that is less than k, so that would be k-1 (assuming k is odd).
+If k is even, our target is going to be k-2.
+
 It is important to remember that if k is odd, then k-1 is even.
 It is important to remember that if k is even, then k-1 is odd.
 
 An axiom to keep in mind: (k-1 | k) is always k when k is odd # Example: (2|3 => 3)
 
-Why?
+Why? Some users explain:
 
 In binary form:
     k   = 10110
@@ -51,5 +67,14 @@ In binary form:
     k-1 == (k-1) & pos
 
 You can get k-1 if pos <= n is TRUE. And you can get pos by ((k-1) | (k-1+1)) , that is , ((k-1) | k). Otherwise , you just need to follow the process above when k is ODD (because k-1 is ODD) , then you get the answer k-2.
+
+Why K-2? Well if K-1 is odd, than K-2 is even. Because K-2 is even, the last bit of K-2 is zero.
+Turning the least-significant zero turned into a one, is the same as adding one, and K-2+1 = K-1.
+So K-2 & K-1 = K-2 in cases where K-1 is odd K-1 is <= N by definition so you have an answer.
+
+Note, that in the case where K-1 is even K-1 OR K = K
+Because K <= N the condition (K-1 OR K <= N) is always true in cases where K-1 is even.
+In cases where K-1 is odd, the condition (K-1 OR K <= N) sometimes evaluates to false (the lowest higher number is bigger than N), in which case the answer is K-2. 
+When it evaluates to true, the answer is K-1.
 
 =end
